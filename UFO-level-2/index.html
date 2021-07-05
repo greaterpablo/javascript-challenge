@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <link rel="icon" href="static/images/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body style="background-color:rgb(82, 82, 92);">
+  <div class="bg-image" style="height: 2vh">
+    <img style="max-width: 100%;" src="static/images/nasa.jpg" alt="Sky night">
+  </div>
+  
+
+  <header>
+    <div class="px-3 py-0 text-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="index.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img style="width: 40px;" src="static/images/ufo.svg" class="bi me-2" width="40" role="img" aria-label="Bootstrap">
+            <span class="fs-5">UFO Finder</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="hero text-center text-white py-3 aos-init wow fadeInLeft" data-wow-delay="0.3s">
+    <h1 style="font-size:4.5em;" class="fw-bold lh-1">UFO Sightings</h1>
+    <p style="font-size: 1.5rem;">The Truth is Out There</p>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <aside class="filters">
+          
+            <div class="card-heading text-white fw-bold" style="font-size: larger;">Filter Search</div>
+            <div class="card-body p-0 border-dark">
+              <form>
+                <div class="form-group mask-custom">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item pb-3">
+                      <label class="text-grey" for="date">Date</label>
+                      <input class="form-control" id="datetime" type="text" placeholder="1/4/2010">
+                    </li>
+                    <li class="filter list-group-item pb-3">
+                      <label class="text-grey" for="city">City</label>
+                      <input class="form-control " id="city_field" type="text" placeholder="san pablo">
+                    </li>
+                    <li class="filter list-group-item pb-3">
+                      <label class="text-grey" for="state">State</label>
+                      <input class="form-control" id="state_field" type="text" placeholder="ca">
+                    </li>
+                    <li class="filter list-group-item pb-3">
+                      <label class="text-grey" for="country">Country</label>
+                      <input class="form-control" id="country_field" type="text" placeholder="us">
+                    </li>
+                    <li class="filter list-group-item pb-3">
+                      <label class="text-grey" for="shape">Shape</label>
+                      <input class="form-control" id="shape_field" type="text" placeholder="unknown">
+                    </li>
+                    
+                  </ul>
+                </div>
+                  <div class="container p-0">
+                    <div class="row text-center">
+                      <div class="col-7 pe-0" >
+                        <button id="filter-btn" type="button" class="btn btn-primary" style="margin-top: 10px;">Filter Table</button>
+                      </div>
+                      <div class="col-5 ps-0">
+                        <a href="index.html"><button id="clear-btn" type="button" class="btn btn-success" style="margin-top: 10px;">Clear</button>  </a>  
+                      </div>
+                    </div>
+                  </div>
+                                    
+                
+                
+              </form>
+            </div>
+          
+        </aside>
+      </div>
+      <div class="col-md-10">
+        <div id="table-area" class="tableFixHead m-b-110 header-color">
+          <table id="ufo-table" class="table table-dark table-striped">
+            <thead>
+              <tr class="row100 head">
+                <th class="table-head">Date</th>
+                <th class="table-head">City</th>
+                <th class="table-head">State</th>
+                <th class="table-head">Country</th>
+                <th class="table-head">Shape</th>
+                <th class="table-head">Duration</th>
+                <th class="table-head">Comments</th>
+              </tr>
+            </thead>
+              <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+  
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
